@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Thêm Font Awesome từ CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Bootstrap JS và Popper.js (cho dropdown và các component khác) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <header id="top" data-anchor="true" data-name="Header" class="o_header_standard">
+        <nav data-name="Navbar" class="navbar navbar-expand-lg navbar-light o_colored_level o_cc bap_website_header">
+            <div id="top_menu_container" class="container justify-content-start justify-content-lg-between">
+
+                <!-- Logo -->
+                <a href="#" class="navbar-brand logo mr-4">
+                    <span role="img" aria-label="Logo of BEMO Website" title="BEMO Website">
+                        <img src="./images/BAP_logo.png" class="img img-fluid" alt="BEMO Website" loading="lazy">
+                    </span>
+                </a>
+
+                <!-- Navbar Toggle Button -->
+                <button type="button" data-toggle="collapse" data-target="#top_menu_collapse"
+                    class="navbar-toggler ml-auto">
+                    <span class="navbar-toggler-icon o_not_editable"></span>
+                </button>
+
+                <!-- Navbar Menu -->
+                <div id="top_menu_collapse" class="collapse navbar-collapse order-last order-lg-0 bap_website_collapse">
+                    <ul id="top_menu" class="nav navbar-nav o_menu_loading flex-grow-1">
+
+                        <!-- Home -->
+                        <li class="nav-item bap_website_nav-item">
+                            <a role="menuitem" href="#" class="nav-link">
+                                <span>Home</span>
+                            </a>
+                        </li>
+
+                        <!-- Blog -->
+                        <li class="nav-item bap_website_nav-item">
+                            <a role="menuitem" href="#" class="nav-link">
+                                <span>About Us</span>
+                            </a>
+                        </li>
+
+                        <!-- Products & Services -->
+                        <li class="nav-item bap_website_nav-item">
+                            <a role="menuitem" href="#" class="nav-link">
+                                <span>Blog</span>
+                            </a>
+                        </li>
+
+                        <!-- User Dropdown -->
+                        <li class="nav-item bap_website_nav-item dropdown ml-lg-auto o_no_autohide_item">
+                            <a href="#" role="button" data-toggle="dropdown"
+                                class="dropdown-toggle nav-link font-weight-normal" aria-expanded="false">
+                                <span>Nguyễn Bình Minh</span>
+                            </a>
+                            <div role="menu" class="dropdown-menu js_usermenu">
+                                <a href="#" role="menuitem"
+                                    class="dropdown-item">Tài khoản của Tôi</a>
+                                <div id="o_logout_divider" class="dropdown-divider"></div>
+                                <a role="menuitem" id="o_logout" class="dropdown-item"
+                                    href="#">Đăng xuất</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Language Selector -->
+                <div class="js_language_selector ml-2 dropdown bap_website_language_selector">
+                    <button class="btn btn-sm btn-outline-secondary border-0 dropdown-toggle" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="o_lang_flag" src="./images/VN_logo.png" loading="lazy">
+                        <span class="align-middle"> Tiếng Việt</span>
+                    </button>
+                    <div class="dropdown-menu" role="menu">
+                        <!-- English -->
+                        <a class="dropdown-item js_change_lang" href="#" data-url_code="en">
+                            <img class="o_lang_flag" src="./images/US_logo.jpg" loading="lazy">
+                            <span>English (US)</span>
+                        </a>
+                        <!-- Vietnamese -->
+                        <a class="dropdown-item js_change_lang" href="#"
+                            data-url_code="vi">
+                            <img class="o_lang_flag" src="./images/VN_logo.png" loading="lazy">
+                            <span> Tiếng Việt</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="bap_website_homepage">
+
+        <!-- Banner Section -->
+        <section class="bap_website_banner">
+            <div class="container">
+                <div class="bap_website_banner_content">
+                    <h1>One platform for your team to get work done faster</h1>
+                    <p>Comprehensive features make Bemo® the premier option to boost efficiency and productivity in your
+                        workflow.</p>
+                    <a class="btn btn-primary" href="#">Go to system</a>
+                </div>
+                <div class="bap_website_banner_image">
+                    <img src="./images/BAP_About_Hello.png" alt="BAP XIN CHÀO" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section class="bap_website_news">
+            <div class="container">
+                <div class="bap_website_title">
+                    <img src="./images/News_icon.png" loading="lazy">
+                    <h1>TIN TỨC NỘI BỘ MỚI NHẤT</h1>
+                </div>
+                <div class="bap_website_news_content">
+                    <!-- Swiper container -->
+                    <div class="homepage-blogs-gallery swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Page 1 (3 articles per page) -->
+                            <div class="swiper-slide">
+                                <div class="row">
+                                    <!-- Blog Item 1 -->
+                                    <div class="col-md-4">
+                                        <div class="card h-100">
+                                            <a href="#">
+                                                <div class="card-top">
+                                                    <div
+                                                        class="o_record_cover_container d-flex flex-column h-100 o_colored_level o_cc o_cc3 rounded shadow-sm overflow-hidden h-100">
+                                                        <div class="o_record_cover_component o_record_cover_image"
+                                                            style="background-image: url(./images/BAP_News_img.jpg);">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-content">
+                                                    <div class="card-date">
+                                                        <p><span><i
+                                                                    class="fa fa-calendar-o"></i></span><time>27/06/2022</time>
+                                                        </p>
+                                                    </div>
+                                                    <h3 class="card-title">[BAP x DUT] Blockchain Seminar</h3>
+                                                    <p class="card-text">On April 23, BAP company had a sharing session
+                                                        on the topic of Blockchain with the participation of students...
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Blog Item 2 -->
+                                    <div class="col-md-4">
+                                        <div class="card h-100">
+                                            <a href="#">
+                                                <div class="card-top">
+                                                    <div
+                                                        class="o_record_cover_container d-flex flex-column h-100 o_colored_level o_cc o_cc3 rounded shadow-sm overflow-hidden h-100">
+                                                        <div class="o_record_cover_component o_record_cover_image"
+                                                            style="background-image: url(./images/BAP_News_img.jpg);">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-content">
+                                                    <div class="card-date">
+                                                        <p><span><i
+                                                                    class="fa fa-calendar-o"></i></span><time>27/06/2022</time>
+                                                        </p>
+                                                    </div>
+                                                    <h3 class="card-title">[BAP x DUT] Blockchain Seminar</h3>
+                                                    <p class="card-text">On April 23, BAP company had a sharing session
+                                                        on the topic of Blockchain with the participation of students...
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Blog Item 3 -->
+                                    <div class="col-md-4">
+                                        <div class="card h-100">
+                                            <a href="#">
+                                                <div class="card-top">
+                                                    <div
+                                                        class="o_record_cover_container d-flex flex-column h-100 o_colored_level o_cc o_cc3 rounded shadow-sm overflow-hidden h-100">
+                                                        <div class="o_record_cover_component o_record_cover_image"
+                                                            style="background-image: url(./images/BAP_News_img.jpg);">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-content">
+                                                    <div class="card-date">
+                                                        <p><span><i
+                                                                    class="fa fa-calendar-o"></i></span><time>27/06/2022</time>
+                                                        </p>
+                                                    </div>
+                                                    <h3 class="card-title">[BAP x DUT] Blockchain Seminar</h3>
+                                                    <p class="card-text">On April 23, BAP company had a sharing session
+                                                        on the topic of Blockchain with the participation of students...
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Page 2 (another set of 3 articles) -->
+                            <div class="swiper-slide">
+                                <div class="row">
+                                    <!-- Blog Item 1 -->
+                                    <div class="col-md-4">
+                                        <div class="card h-100">
+                                            <a href="#">
+                                                <div class="card-top">
+                                                    <div
+                                                        class="o_record_cover_container d-flex flex-column h-100 o_colored_level o_cc o_cc3 rounded shadow-sm overflow-hidden h-100">
+                                                        <div class="o_record_cover_component o_record_cover_image"
+                                                            style="background-image: url(./images/BAP_News_img.jpg);">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-content">
+                                                    <div class="card-date">
+                                                        <p><span><i
+                                                                    class="fa fa-calendar-o"></i></span><time>27/06/2022</time>
+                                                        </p>
+                                                    </div>
+                                                    <h3 class="card-title">[BAP x DUT] Blockchain Seminar</h3>
+                                                    <p class="card-text">On April 23, BAP company had a sharing session
+                                                        on the topic of Blockchain with the participation of students...
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Blog Item 2 -->
+                                    <div class="col-md-4">
+                                        <div class="card h-100">
+                                            <a href="#">
+                                                <div class="card-top">
+                                                    <div
+                                                        class="o_record_cover_container d-flex flex-column h-100 o_colored_level o_cc o_cc3 rounded shadow-sm overflow-hidden h-100">
+                                                        <div class="o_record_cover_component o_record_cover_image"
+                                                            style="background-image: url(./images/BAP_News_img.jpg);">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-content">
+                                                    <div class="card-date">
+                                                        <p><span><i
+                                                                    class="fa fa-calendar-o"></i></span><time>27/06/2022</time>
+                                                        </p>
+                                                    </div>
+                                                    <h3 class="card-title">[BAP x DUT] Blockchain Seminar</h3>
+                                                    <p class="card-text">On April 23, BAP company had a sharing session
+                                                        on the topic of Blockchain with the participation of students...
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Blog Item 3 -->
+                                    <div class="col-md-4">
+                                        <div class="card h-100">
+                                            <a href="#">
+                                                <div class="card-top">
+                                                    <div
+                                                        class="o_record_cover_container d-flex flex-column h-100 o_colored_level o_cc o_cc3 rounded shadow-sm overflow-hidden h-100">
+                                                        <div class="o_record_cover_component o_record_cover_image"
+                                                            style="background-image: url(./images/BAP_News_img.jpg);">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-content">
+                                                    <div class="card-date">
+                                                        <p><span><i
+                                                                    class="fa fa-calendar-o"></i></span><time>27/06/2022</time>
+                                                        </p>
+                                                    </div>
+                                                    <h3 class="card-title">[BAP x DUT] Blockchain Seminar</h3>
+                                                    <p class="card-text">On April 23, BAP company had a sharing session
+                                                        on the topic of Blockchain with the participation of students...
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more pages if needed -->
+                        </div>
+                        <div class="swiper-pagination swiper-pagination-dots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Intention Section -->
+        <!-- <section class="bap_website_intention">
+            <div class="container">
+                <div class="bap_website_intention_image">
+                    <img src="./images/BAP_5T_img.png" alt="" loading="lazy">
+                </div>
+                <div class="bap_website_intention_content">
+                    <div class="bap_website_title">
+                        <img src="./images/News_icon.png" loading="lazy">
+                        <h1>Company Intention</h1>
+                    </div>
+                    <p>On April 23, BAP company had a sharing session on the topic of Blockchain with the participation of students...</p>
+                    <p>On April 23, BAP company had a sharing session on the topic of Blockchain with the participation of students...</p>
+                    <p>On April 23, BAP company had a sharing session on the topic of Blockchain with the participation of students...</p>
+                    <p>On April 23, BAP company had a sharing session on the topic of Blockchain with the participation of students...</p>
+                    <p>On April 23, BAP company had a sharing session on the topic of Blockchain with the participation of students...</p>
+                    <p>On April 23, BAP company had a sharing session on the topic of Blockchain with the participation of students...</p>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="bap_website_intention">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Phần hình ảnh -->
+                    <div class="col-md-6">
+                        <div class="bap_website_intention_image text-center">
+                            <img src="./images/BAP_5T_img.png" alt="" loading="lazy" class="img-fluid">
+                        </div>
+                    </div>
+                    <!-- Phần nội dung -->
+                    <div class="col-md-6">
+                        <div class="bap_website_intention_content">
+                            <div class="bap_website_title">
+                                <img src="./images/News_icon.png" loading="lazy" class="img-fluid mb-3">
+                                <h1>Company Intention</h1>
+                            </div>
+                            <p>On April 23, BAP company had a sharing session on the topic of Blockchain with the
+                                participation of students...</p>
+                            <p>On April 23, BAP company had a sharing session on the topic of Blockchain with the
+                                participation of students...</p>
+                            <p>On April 23, BAP company had a sharing session on the topic of Blockchain with the
+                                participation of students...</p>
+                            <p>On April 23, BAP company had a sharing session on the topic of Blockchain with the
+                                participation of students...</p>
+                            <p>On April 23, BAP company had a sharing session on the topic of Blockchain with the
+                                participation of students...</p>
+                            <p>On April 23, BAP company had a sharing session on the topic of Blockchain with the
+                                participation of students...</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Gallery Section -->
+        <section class="bap_website_gallery">
+            <div class="container">
+                <div class="bap_website_title">
+                    <img src="./images/News_icon.png" loading="lazy">
+                    <h1>Company Gallery</h1>
+                </div>
+                <div class="bap_website_gallery_content" id="homepage-company-gallery">
+                    <div class="bap_website_gallery_item bap_website_gallery_item_2">
+                        <video loop="true" autoplay="autoplay" controls="controls" muted="muted">
+                            <source src="https://bap-software.net/wp-content/uploads/2021/06/video-nen.mp4"
+                                type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="bap_website_gallery_item">
+                        <a href="#" data-fancybox="gallery">
+                            <img src="./images/BAP_Gallery_1.jpg" alt="BAP IMG" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="bap_website_gallery_item">
+                        <a data-fancybox="gallery" href="#">
+                            <img src="./images/BAP_Gallery_2.jpg" alt="BAP IMG" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="bap_website_gallery_item">
+                        <a data-fancybox="gallery" href="#">
+                            <img src="./images/BAP_Gallery_1.jpg" alt="BAP IMG" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="bap_website_gallery_item">
+                        <a data-fancybox="gallery" href="#">
+                            <img src="./images/BAP_Gallery_2.jpg" alt="BAP IMG" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="bap_website_gallery_item">
+                        <a data-fancybox="gallery" href="#">
+                            <img src="./images/BAP_Gallery_2.jpg" alt="BAP IMG" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="bap_website_gallery_item">
+                        <a data-fancybox="gallery" href="#">
+                            <img src="./images/BAP_Gallery_2.jpg" alt="BAP IMG" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper('.swiper', {
+                slidesPerView: 1, // Hiển thị 1 trang (slide) mỗi lần
+                spaceBetween: 30, // Khoảng cách giữa các slide
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true, // Cho phép người dùng bấm vào pagination
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next', // Nút "Next"
+                    prevEl: '.swiper-button-prev', // Nút "Previous"
+                },
+                loop: true, // Lặp lại các slide
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
